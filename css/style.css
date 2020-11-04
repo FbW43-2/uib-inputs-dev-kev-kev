@@ -1,0 +1,30 @@
+header > div {
+  text-align: center;
+  padding: 30px;
+}
+
+#search::placeholder {
+  color: lightblue;
+}
+
+form {
+  text-align: center;
+}
+
+fieldset > div {
+  padding: 10px;
+  text-align: left;
+}
+
+fieldset {
+  display: inline-block;
+}
+
+input:invalid,
+textarea:invalid {
+  background-color: rgba(240, 6, 6, 0.7);
+}
+
+:focus {
+  border: 3px black solid;
+}
