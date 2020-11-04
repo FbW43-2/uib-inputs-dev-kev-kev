@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <form action="get">
+                <input type="search" id="search" name="search" placeholder="Search article...">
+                <button>Search</button>
+            </form>
+        </div>
+    </header>
+    
+    <main role="main">
+        <form action="post" action="/upload-article">
+            <fieldset>
+                <legend>Upload your article</legend>
+                <div>
+                    <label for="first-headline">First headline:</label>
+                    <input type="text" id="first-headline" name="first-headline" required minlength="15" maxlength="30">
+                </div>
+                <div>
+                    <label for="second-headline">Second headline:</label>
+                    <input type="text" id="second-headline" name="second-headline" minlength="15" maxlength="50">
+                </div>
+                <div>
+                    <label for="text">Your text here:
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Write your text here..." required minlength="40" maxlength="300"></textarea>
+                    </label>
+                    
+                </div>
+                <div>
+                    <label for="input-file">Upload an image:</label>
+                    <input type="file" id="input-file" name="input-file" accept="image/*" multiple>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>
